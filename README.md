@@ -1,24 +1,53 @@
-# README
+# Meshiterro
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 0章 Meshiterroについて
 
-Things you may want to cover:
+#### ・機能一覧
+画像投稿の一覧表示<br>
+画像投稿の詳細表示<br>
+画像投稿の削除機能<br>
+コメント機能<br>
+いいね機能<br>
+ユーザ登録機能/ログイン機能<br>
+ユーザーのマイページ(ユーザの詳細表示)<br>
+ユーザーのプロフィール編集機能
 
-* Ruby version
+#### ・作成手順
+1.機能の制作<br>
+2.重複した機能の共通化(部分テンプレート)<br>
+3.レイアウトの調整
 
-* System dependencies
+## 1章 アプリケーションを作成・準備
 
-* Configuration
+・アプリケーションMeshiterro作成<br>
+・homesコントローラー作成<br>
+・ActiveStorageのインストール<br>
+・画像サイズの変更を行うGemを導入<br>
+・エラー回避のために設定を加える config.active_job.queue_adapter = :inline
 
-* Database creation
+## 2章 データベースの設計方法
 
-* Database initialization
+#### データベース設計とは
+アプリケーションを開発する際「どのデータをどのように保存するか<br>」
+を事前に考えておかないこと複雑なデータ処理になる。<br>
+開発前に必要なデータを明らかにさせて、どのような形で保存するかを検討して組み立てることが重要<br>
+事前にデータベースの詳細モデルを設計することを、「データベース設計（database design）」という
 
-* How to run the test suite
+#### 手順
+1.ワイヤーフレームを描く<br>
+2.必要なデータ項目を表にまとめる<br>
+3.カラム名を決める<br>
+4.「列の繰り返し項目」を削除する<br>
+5.「行の繰り返し項目」を削除する<br>
+6.テーブルにIDカラムを追加する<br>
+7.共通利用のデータをテーブル化する
 
-* Services (job queues, cache servers, search engines, etc.)
+## 3章 ユーザー認証機能(1) ユーザー認証とは
 
-* Deployment instructions
+#### ユーザー認証とは
+操作している個人を特定したり操作できる人を制限する機能。<br>
+誰がどのような情報を投稿したかわかるようにするために必要。
 
-* ...
+#### イメージ
+1.ユーザーがどの投稿をしたか特定するために、投稿データにユーザーごとに与えられたIDを持たせる。<br>
+2.1の情報は、ユーザーが投稿を行なったときのみ、データに持たせる。
