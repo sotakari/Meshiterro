@@ -115,3 +115,7 @@ deviseの機能を使用してログインしている、ログインしてい�
 #### Aboutページ作成
 ・after_sign_in_path_for/after_sign_out_path_for
 <br>Deviseが用意しているメソッドで、サインイン、サインアウト後にどこに遷移するかを設定しているメソッド。
+
+## 8章 投稿機能の作成(1) - モデルを準備しよう(1)
+
+「PostImage」という命名でモデルを作成し、ActiveStorageの機能を使って画像をアップロードできるようにする。
