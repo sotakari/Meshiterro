@@ -151,3 +151,6 @@ current_user.idと記述することでログインユーザーのidを取得す
 ・ユーザーごとのプロフィール画像を保存できないためModelに<br>
 has_one_attached :profile_imageと記述しActiveStorageでプロフィール画像を保存できるように設定する。<br>
 ・users Controllerを準備し、resourcesでルーティングを書きかえする。
+
+## 15章 ユーザーに関する機能(2) ユーザーページの作成
+アソシエーションで取得できる情報の違いを学ぶ。
