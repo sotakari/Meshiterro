@@ -261,3 +261,16 @@ has_one_attached :profile_image<br>と記述しActiveStorageでプロフィー�
 * .container（全体）
 * .row（行）
 * .col（列）
+
+## 24章 MeshiterroにBootstrapを導入しよう
+
+#### 導入方法
+方法は主に3パターン
+1. CDNで導入する
+2. ファイルを配置する
+3. yarnでインストールする
+今回は3.yarnでインストール【yarn add jquery bootstrap@4.6.2 popper.js】
+
+* FontAwesomeの導入
+* ヘッダー・フッダー、投稿一覧、投稿フォームを整える
+* ※Bootstrap関連は非常に難しく理解に時間を要するため復習を繰り返す。
